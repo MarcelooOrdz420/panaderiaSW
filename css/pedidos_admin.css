@@ -1,0 +1,173 @@
+/* ======================================
+   pedidos_admin.css
+   Estilo consistente con productos_admin.css
+   Tema naranja cálido y diseño limpio
+   ====================================== */
+
+:root {
+  --naranja: #e1913c;
+  --naranja-oscuro: #d2691e;
+  --fondo: #fffaf3;
+  --texto: #4a3728;
+  --blanco: #ffffff;
+}
+
+body {
+  background-color: var(--fondo);
+  font-family: 'Poppins', sans-serif;
+  color: var(--texto);
+  margin: 0;
+  padding: 20px;
+}
+
+/* ===== TÍTULO ===== */
+.section-title {
+  color: var(--naranja);
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-left: 6px solid var(--naranja);
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.table-container {
+  background: var(--blanco);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  overflow-x: auto;
+}
+
+/* ===== TABLA ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 1px solid #f0d7b2;
+}
+
+th {
+  background-color: var(--naranja);
+  color: var(--blanco);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+  background-color: #fff6ee;
+}
+
+/* ===== ESTADO ===== */
+.estado {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+}
+
+.estado.pendiente {
+  background: #f4b400;
+}
+
+.estado.enviado {
+  background: #34a853;
+}
+
+/* ===== BOTONES ===== */
+.btn {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-editar {
+  background: linear-gradient(90deg, var(--naranja), var(--naranja-oscuro));
+  color: var(--blanco);
+}
+
+.btn-eliminar {
+  background: #d9534f;
+  color: var(--blanco);
+}
+
+.btn-detalle {
+  background: #3498db;
+  color: #fff;
+}
+
+/* ===== BOTÓN VOLVER ===== */
+.back-btn {
+  display: inline-block;
+  margin-top: 25px;
+  text-decoration: none;
+  background: linear-gradient(90deg, var(--naranja), var(--naranja-oscuro));
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(225, 145, 60, 0.25);
+}
+
+/* ===== MENSAJES ===== */
+.msg {
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.msg.exito {
+  background: #eafaf1;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.msg.error {
+  background: #fdecea;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 850px) {
+  th, td {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+}

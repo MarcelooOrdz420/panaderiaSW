@@ -1,0 +1,277 @@
+/* ===== RESET GENERAL ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fff3e0; /* fondo naranja claro */
+}
+
+/* ===== CONTENEDOR GENERAL ===== */
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding-bottom: 40px;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #e1913c; /* naranja opaco */
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== SLIDER ===== */
+.slider {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  overflow: hidden;
+  background: #fff3e0;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  padding: 15px 0;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.slide {
+  min-width: calc(100% / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 85%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 1s ease, box-shadow 0.5s ease;
+}
+
+.slide img.zoom {
+  transform: scale(1.12);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(210, 105, 30, 0.8);
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 50%;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+button.prev:hover, button.next:hover {
+  background: rgba(210, 105, 30, 1);
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
+
+/* ===== PRODUCTOS ===== */
+.productos {
+    text-align: center;
+    padding: 40px;
+}
+
+.productos h2 {
+    color: #e1913c;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.producto {
+    background: #fffaf4;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.producto h3 {
+    margin: 10px 0 5px;
+    color: #d2691e;
+}
+
+.btn {
+    display: inline-block;
+    background: #e1913c;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #b96b25;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #e1913c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0 0 15px 15px;
+}
+
+footer button {
+    background: white;
+    color: #e1913c;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+footer button:hover {
+    background: #ffe4c4;
+}
+
+/* ===== LOGIN Y REGISTRO ===== */
+.login-container, .register-container {
+    max-width: 420px;
+    margin: 60px auto;
+    background: #fffaf4;
+    padding: 35px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.login-container h2, .register-container h2 {
+    color: #e1913c;
+    margin-bottom: 25px;
+}
+
+.login-container input,
+.register-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.login-container input:focus,
+.register-container input:focus {
+    border: 1px solid #e1913c;
+}
+
+.login-container button,
+.register-container button {
+    width: 100%;
+    background: #e1913c;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+.login-container button:hover,
+.register-container button:hover {
+    background: #b96b25;
+}
+
+/* ===== PANEL ADMIN ===== */
+.admin-panel {
+    width: 90%;
+    margin: 40px auto;
+    background: #fffaf4;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.admin-panel h2 {
+    color: #e1913c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.admin-panel table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.admin-panel table th,
+.admin-panel table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-panel table th {
+    background: #e1913c;
+    color: white;
+}
+
+.admin-panel table tr:hover {
+    background: #fff1e0;
+}
+
+.admin-panel .btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-right: 5px;
+}

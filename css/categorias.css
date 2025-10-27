@@ -1,0 +1,128 @@
+body {
+    background: #fff7ef;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 140, 0, 0.3);
+    border-top: 5px solid #ff7b00;
+}
+
+h2 {
+    text-align: center;
+    color: #ff7b00;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+    background: #fff3e6;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ffd6a0;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ffcc80;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 100%;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff7b00;
+    box-shadow: 0 0 4px rgba(255, 123, 0, 0.5);
+}
+
+button {
+    background-color: #ff7b00;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #e66900;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background: #ff7b00;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ffd6a0;
+}
+
+tr:nth-child(even) {
+    background-color: #fff7ec;
+}
+
+tr:hover {
+    background-color: #ffe7cc;
+}
+
+.btn-eliminar {
+    background-color: #e53e3e;
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.btn-eliminar:hover {
+    background-color: #c53030;
+}
+
+.btn-volver {
+    display: inline-block;
+    background: #ffb347;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    transition: background 0.3s;
+    font-weight: 500;
+}
+
+.btn-volver:hover {
+    background: #ff7b00;
+}

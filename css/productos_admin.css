@@ -1,0 +1,202 @@
+/* ======== ESTILOS GENERALES ======== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fafafa;
+  color: #333;
+}
+
+.top-bar {
+  background: #f5b041;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.main-area {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.msg {
+  background: #eafaf1;
+  padding: 10px;
+  border-left: 4px solid #27ae60;
+  margin-bottom: 15px;
+}
+
+/* ======== FORMULARIO ======== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input,
+select,
+textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #f5b041;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #e67e22;
+}
+
+/* ======== TABLA ======== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background: #f5b041;
+  color: white;
+}
+
+/* ======== EFECTO HOVER TRANSLÚCIDO ======== */
+.producto {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.producto img {
+  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.producto:hover .overlay {
+  opacity: 1;
+}
+
+.overlay button {
+  background: rgba(245, 176, 65, 0.9);
+  border: none;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.overlay button:hover {
+  background: #e67e22;
+}
+
+/* ======== MODAL DE DETALLES ======== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 50;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 8% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+  animation: zoomIn 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.modal-content img {
+  width: 180px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-content h3 {
+  margin: 5px 0;
+  color: #444;
+}
+
+.modal-content p {
+  color: #666;
+  font-size: 14px;
+}
+
+.close-btn {
+  background: #f5b041;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.close-btn:hover {
+  background: #e67e22;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

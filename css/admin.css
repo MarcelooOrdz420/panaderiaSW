@@ -1,0 +1,150 @@
+/* ======================================
+   admin.css
+   Tema cálido unificado con comprar.css
+   ====================================== */
+
+:root {
+  --naranja: #e1913c;
+  --naranja-oscuro: #d2691e;
+  --fondo: #fffaf3;
+  --texto: #4a3728;
+  --blanco: #ffffff;
+  --borde: #f0d7b2;
+}
+
+/* ===== RESET GENERAL ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+}
+
+/* ===== HEADER ===== */
+header {
+  background: var(--blanco);
+  color: var(--texto);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--borde);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--naranja-oscuro);
+}
+
+nav a {
+  color: var(--naranja-oscuro);
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--naranja);
+  color: var(--blanco);
+}
+
+nav .logout {
+  background: linear-gradient(90deg, var(--naranja), var(--naranja-oscuro));
+  color: var(--blanco);
+  font-weight: bold;
+}
+
+nav .logout:hover {
+  background: linear-gradient(90deg, var(--naranja-oscuro), #a85414);
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main.contenido {
+  max-width: 900px;
+  background: var(--blanco);
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(210, 105, 30, 0.15);
+  border-top: 5px solid var(--naranja);
+  text-align: center;
+}
+
+main h2 {
+  color: var(--naranja-oscuro);
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+main p {
+  font-size: 16px;
+  color: var(--texto);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--blanco);
+  color: var(--texto);
+  text-align: center;
+  padding: 15px 0;
+  border-top: 2px solid var(--borde);
+  margin-top: 40px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.03);
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ===== BOTONES GENERALES ===== */
+button, .btn {
+  background: linear-gradient(90deg, var(--naranja), var(--naranja-oscuro));
+  color: var(--blanco);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, var(--naranja-oscuro), #a85414);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(210, 105, 30, 0.25);
+}
+
+/* ===== ANIMACIONES ===== */
+header, main, footer {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  main.contenido {
+    width: 90%;
+    padding: 25px;
+  }
+}
